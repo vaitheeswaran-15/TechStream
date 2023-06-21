@@ -1,18 +1,18 @@
 databases:
   - name: TechStream
-    databaseName: TechStream_production
+    databaseName: TechStream
     user: TechStream
 
 services:
   - type: web
-    name: mysite
+    name: TechStream
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysite
+          name: TechStream
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
