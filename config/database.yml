@@ -81,4 +81,7 @@ test:
 #
 production:
   <<: *default
+  database: TechStream_production
+  username: TechStream
+  password: <%= ENV['TECHSTREAM_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
