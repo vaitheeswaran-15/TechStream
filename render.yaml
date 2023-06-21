@@ -1,6 +1,6 @@
 databases:
   - name: TechStream
-    databaseName: TechStream
+    databaseName: TechStream_production
     user: TechStream
 
 services:
